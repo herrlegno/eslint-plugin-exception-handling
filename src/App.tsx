@@ -3,8 +3,16 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+function throwFunction() {
+    throw new Error('throwFunction')
+}
+
+throwFunction()
+
 function App() {
   const [count, setCount] = useState(0)
+
+  throwFunction()
 
   return (
     <>
